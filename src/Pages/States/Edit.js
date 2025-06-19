@@ -31,7 +31,6 @@ export default function Edit() {
           },
         });
         const memberData = response.data;
-        console.log("stateData : ", memberData);
        setForm({
         name: memberData.name,
         code: memberData.code,
@@ -57,7 +56,6 @@ export default function Edit() {
           },
         });
         setCountries(response.data); // Store API data in state
-        console.log("CountryData : ", response.data)
       } catch (error) {
         console.error("Error fetching states:", error);
       }
@@ -79,7 +77,6 @@ export default function Edit() {
       countryId: form.selectedCountryId,
     };
 
-    console.log(payload)
 
     try {
       await axios.put(`${apiUrl}state/update`, payload, {

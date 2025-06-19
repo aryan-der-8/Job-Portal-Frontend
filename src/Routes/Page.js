@@ -17,6 +17,10 @@ import CountryList from '../Pages/Country/List'
 import StatesAdd from '../Pages/States/Add';
 import StatesEdit from '../Pages/States/Edit';
 import StatesList from '../Pages/States/List'
+// city Routes
+import CityAdd from '../Pages/City/Add';
+import CityEdit from '../Pages/City/Edit';
+import CityList from '../Pages/City/List';
 
 
 export default function Page() {
@@ -34,6 +38,10 @@ export default function Page() {
       <Route path="/statesadd" element={<ProtectedRoute element={<StatesAdd />} allowedRoles={['admin']} />} />
       <Route path="/statesedit" element={<ProtectedRoute element={<StatesEdit />} allowedRoles={['admin']} />} />
       <Route path="/stateslist" element={<ProtectedRoute element={<StatesList />} allowedRoles={['admin']} />} />
+      {/* City Routes */}
+      <Route path="/cityadd" element={<ProtectedRoute element={<CityAdd />} allowedRoles={['admin']} />} />
+      <Route path="/cityedit" element={<ProtectedRoute element={<CityEdit />} allowedRoles={['admin']} />} />
+      <Route path="/citylist" element={<ProtectedRoute element={<CityList />} allowedRoles={['admin']} />} />
 
     </Routes>
   )

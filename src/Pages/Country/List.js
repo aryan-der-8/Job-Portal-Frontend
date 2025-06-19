@@ -36,7 +36,6 @@ export default function ListMember() {
 
       setLoaded(false);
       const data = response.data || [];
-      console.log(data, "data")
 
       setRecords(data);
     } catch (error) {
