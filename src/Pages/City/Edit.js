@@ -31,7 +31,6 @@ export default function Edit() {
           },
         });
         const memberData = response.data;
-        console.log("city : ",memberData);
        setForm({
         name: memberData.name,
         code: memberData.code,
