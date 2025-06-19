@@ -19,8 +19,6 @@ export default function Edit() {
   const [countries, setCountries] = useState([]);
   const [loaded, setLoaded] = useState(false); //  button  loading  efect deta  hold stat
   const currentPath = location?.pathname || "";
-  // const [selectedCountryId, setSelectedCountryId] = useState("");
-
 
   // Fetch existing state data
   useEffect(() => {
@@ -38,7 +36,6 @@ export default function Edit() {
         code: memberData.code,
         selectedCountryId: memberData.country
        })
-        // setSelectedCountryId(memberData.country);
       } catch (error) {
         console.error('Error fetching member data:', error);
       }
@@ -176,7 +173,6 @@ export default function Edit() {
                       <select class="custom-select rounded-0" 
                         id="exampleSelectRounded0"
                         value={form.selectedCountryId}
-                        // setSelectedCountryId(e.target.value)
                         onChange={(e) => 
                           setForm(prev => ({...prev, selectedCountryId:e.target.value}))
                         }

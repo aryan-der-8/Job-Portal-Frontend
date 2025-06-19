@@ -15,14 +15,6 @@ export default function Edit() {
   const [loaded, setLoaded] = useState(false); //  button  loading  efect deta  hold stat
   const currentPath = location?.pathname || "";
 
-  // this is for page security checking
-  useEffect(() => {
-    const role = localStorage.getItem('role');
-    if (role !== 'admin') {  // Simplified condition
-      navigate("/");
-    }
-  }, [navigate]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {

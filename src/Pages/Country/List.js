@@ -17,13 +17,7 @@ export default function ListMember() {
   const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false); //  button  loading  efect deta  hold state
 
-  // this is for page security checking
-  useEffect(() => {
-    const role = localStorage.getItem('role');
-    if (role !== 'admin') {  // Simplified condition
-      navigate("/");
-    }
-  }, [navigate]);
+  
 
   useEffect(() => {
     fetchRecords();

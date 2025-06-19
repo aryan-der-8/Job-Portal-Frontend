@@ -17,14 +17,6 @@ export default function AddMember() {
   const [countries, setCountries] = useState([]);
   const [selectedCountryId, setSelectedCountryId] = useState("");
 
-  // this is for page security checking
-  useEffect(() => {
-    const role = localStorage.getItem('role');
-    if (role !== 'admin') {  // Simplified condition
-      navigate("/");
-    }
-  }, [navigate]);
-
 
   useEffect(() => {
     const fetchCountries = async () => {

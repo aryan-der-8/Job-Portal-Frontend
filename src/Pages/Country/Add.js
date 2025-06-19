@@ -15,15 +15,6 @@ export default function AddMember() {
   const [loaded, setLoaded] = useState(false); //  button  loading  efect deta  hold state
   const currentPath = location?.pathname || "";
 
-  // this is for page security checking
- useEffect(() => {
-  const role = localStorage.getItem('role');
-  if (role !== 'admin') {  // Simplified condition
-    navigate("/");
-  }
-}, [navigate]);
- 
-
  
   const handleSubmit = (e) => {
     setLoaded(true);
