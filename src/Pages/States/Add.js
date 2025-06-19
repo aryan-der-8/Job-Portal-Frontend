@@ -108,9 +108,9 @@ export default function AddMember() {
                 </li>
 
                 <li className="breadcrumb-item">
-                  <Link to={'/countrylist'}>Country List</Link>
+                  <Link to={'/stateslist'}>State List</Link>
                 </li>
-                <li className="breadcrumb-item">Add Country</li>
+                <li className="breadcrumb-item">Add State</li>
               </ol>
             </div>
           </div>

@@ -38,7 +38,6 @@ export default function ListMember() {
 
       setLoaded(false);
       const data = response.data || [];
-      console.log(data, "data")
 
       setRecords(data);
     } catch (error) {
@@ -65,7 +64,7 @@ export default function ListMember() {
         },
       });
       fetchRecords(); // Refresh records after deletion
-      toast.success("Country deleted successfully");
+      toast.success("State deleted successfully");
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -95,7 +94,7 @@ export default function ListMember() {
       center: 'true',
       cell: (row) => (
         <div>
-          <button type="button" className="btn btn-primary btn-xs mr-2" onClick={() => navigate('/', { state: { id: row._id } })}>
+          <button type="button" className="btn btn-primary btn-xs mr-2" onClick={() => navigate('/statesedit', { state: { id: row._id } })}>
             <i className="fas fa-pen"></i>
           </button>
 
