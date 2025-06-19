@@ -5,6 +5,8 @@ import DataTable from 'react-data-table-component';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ContentHeader from '../../components/ContentHeader';
+
 
 export default function ListMember() {
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -108,23 +110,7 @@ export default function ListMember() {
 
   return (
     <Layout ac3="active">
-      <section className="content-header pb-0">
-        <div className="container-fluid">
-          <div className="row mb-2">
-            <div className="col-sm-6">
-              <h5>State List </h5>
-            </div>
-            <div className="col-sm-6">
-              <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item">
-                  <Link to={'/dashboard'}>Dashboard</Link>
-                </li>
-                <li className="breadcrumb-item">State List</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContentHeader title="State List" breadcrumbs={[{ label: 'Dashboard', to: '/dashboard' }, { label: 'State List'}]} />
       <section className="content">
         <div className="container-fluid">
           <div className="row">
